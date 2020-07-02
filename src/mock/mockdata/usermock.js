@@ -4,7 +4,7 @@ import {
 } from '../../constants/index'
 export default {
   login: {
-    path: '/api/user/getUser',
+    path: '/api/user/login',
     method: 'get',
     success() {
       const res = success

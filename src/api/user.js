@@ -1,5 +1,5 @@
-import axios from '../utils/request'
+import request from '../utils/request'
 
 export const userlogin = param => {
-  return axios.get('/api/user/getUser')
+  return request.get('/api/user/login')
 }

@@ -61,22 +61,20 @@ export default {
     login() {
       this.$refs['param'].validate(async valid => {
         if (valid) {
-          const { data: res } = userlogin(this.param)
-          console.log(res)
-        //   if (res.meta.status === 200) {
-        //     this.$message({
-        //       message: '登录成功',
-        //       type: 'success'
-        //     })
-        //     this.$router.push('/')
-        //     window.sessionStorage.setItem('token', res.data.token)
-        //     this.$router.push('/home')
-        //   } else {
-        //     this.$message({
-        //       message: res.meta.msg,
-        //       type: 'error'
-        //     })
-        //   }
+          const { data: res } = await userlogin(this.param)
+          if (res.code === 200) {
+            this.$message({
+              message: '登录成功',
+              type: 'success'
+            })
+            window.sessionStorage.setItem('token', res.data.usertoken)
+            this.$router.push('/')
+          } else {
+            this.$message({
+              message: res.meta.msg,
+              type: 'error'
+            })
+          }
         }
       })
     }

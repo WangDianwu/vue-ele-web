@@ -7,12 +7,11 @@ function _handerApi(apis) {
     Mock.mock(api.path, api.method, api.success)
   })
 }
-
 export default {
   startMock() {
-    // Mock.setup({
-    //   timeout: 0 - 300
-    // })
+    Mock.setup({
+      timeout: 0 - 300
+    })
     _handerApi(user)
   }
 }
