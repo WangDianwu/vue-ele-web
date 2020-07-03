@@ -2,7 +2,7 @@
   <div class="heafer-contiter">
     <div class="header-img">
       <img src="../../assets/logo.png" class="header-img" />
-      <a class="head-z">在路上</a>
+      <a class="head-z">vue-ele-web</a>
     </div>
     <div class="head-msg">
       <a class="header-msg">消息中心</a>
