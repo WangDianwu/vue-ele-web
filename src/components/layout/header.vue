@@ -25,6 +25,7 @@ export default {
       console.log(key, keyPath)
     },
     btnexit() {
+      window.sessionStorage.clear()
       this.$router.push('/login')
     }
   }
