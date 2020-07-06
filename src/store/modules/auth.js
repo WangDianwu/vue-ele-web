@@ -25,11 +25,7 @@ const auth = {
       commit
     }, payload) {
       return new Promise((resolve, reject) => {
-        const user = {
-          userName: payload.username,
-          userId: '00000'
-        }
-        commit(SET_USER, user)
+        commit(SET_USER, payload)
         resolve()
       })
     },

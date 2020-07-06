@@ -67,6 +67,7 @@ export default {
               message: '登录成功',
               type: 'success'
             })
+            this.$store.dispatch('LOGIN', res.data.usertoken)
             window.sessionStorage.setItem('token', res.data.usertoken)
             this.$router.push('/')
           } else {
